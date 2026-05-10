@@ -10,6 +10,18 @@
             </a>
             <p class="tagline">{{ $settings['slogan']->value ?? 'L\'excellence en Audit et Expertise Comptable au cœur de la RDC.' }}</p>
 
+            <div class="footer-contact-info mt-4">
+              @if(isset($settings['address']) && $settings['address']->value)
+                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-accent"></i> {{ $settings['address']->value }}</p>
+              @endif
+              @if(isset($settings['phone']) && $settings['phone']->value)
+                <p class="mb-2"><a href="tel:{{ $settings['phone']->value }}" class="text-reset"><i class="bi bi-telephone-fill me-2 text-accent"></i> {{ $settings['phone']->value }}</a></p>
+              @endif
+              @if(isset($settings['email']) && $settings['email']->value)
+                <p class="mb-0"><a href="mailto:{{ $settings['email']->value }}" class="text-reset"><i class="bi bi-envelope-fill me-2 text-accent"></i> {{ $settings['email']->value }}</a></p>
+              @endif
+            </div>
+
             <div class="social-links mt-4">
               @if(isset($settings['facebook_url']))<a href="{{ $settings['facebook_url']->value }}" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>@endif
               @if(isset($settings['linkedin_url']))<a href="{{ $settings['linkedin_url']->value }}" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>@endif
@@ -77,4 +89,16 @@
       </div>
     </div>
 
+    <style>
+      .footer-contact-info p {
+        font-size: 0.9rem;
+        color: var(--default-color, #444);
+      }
+      .text-accent {
+        color: var(--accent-color) !important;
+      }
+      .footer-contact-info a:hover {
+        color: var(--accent-color) !important;
+      }
+    </style>
   </footer>
