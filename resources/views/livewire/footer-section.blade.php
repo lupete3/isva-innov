@@ -11,9 +11,9 @@
             <p class="tagline">{{ $settings['slogan']->value ?? 'L\'excellence en Audit et Expertise Comptable au cœur de la RDC.' }}</p>
 
             <div class="social-links mt-4">
-              @if(isset($settings['facebook_url']))<a href="{{ $settings['facebook_url']->value }}" aria-label="Facebook"><i class="bi bi-facebook"></i></a>@endif
-              @if(isset($settings['linkedin_url']))<a href="{{ $settings['linkedin_url']->value }}" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>@endif
-              @if(isset($settings['twitter_url']))<a href="{{ $settings['twitter_url']->value }}" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>@endif
+              @if(isset($settings['facebook_url']))<a href="{{ $settings['facebook_url']->value }}" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>@endif
+              @if(isset($settings['linkedin_url']))<a href="{{ $settings['linkedin_url']->value }}" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>@endif
+              @if(isset($settings['twitter_url']))<a href="{{ $settings['twitter_url']->value }}" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>@endif
             </div>
           </div>
         </div>
@@ -26,8 +26,8 @@
                 <ul class="list-unstyled">
                   <li><a href="{{ url('/') }}#about">À Propos</a></li>
                   <li><a href="{{ url('/') }}#team">Notre Équipe</a></li>
-                  <li><a href="#">Carrières</a></li>
-                  <li><a href="#">Actualités</a></li>
+                  <li><a href="{{ route('careers') }}">Carrières</a></li>
+                  <li><a href="{{ route('blog') }}">Actualités</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-4">
@@ -40,12 +40,12 @@
                 </ul>
               </div>
               <div class="col-6 col-md-4">
-                <h5>Support</h5>
+                <h5>Ressources</h5>
                 <ul class="list-unstyled">
-                  <li><a href="#">Centre d'aide</a></li>
+                  <li><a href="{{ route('publications') }}">Publications</a></li>
+                  <li><a href="{{ url('/') }}#faq">FAQ</a></li>
                   <li><a href="{{ url('/') }}#contact">Contact</a></li>
-                  <li><a href="#">Confidentialité</a></li>
-                  <li><a href="#">Conditions</a></li>
+                  <li><a href="{{ route('blog') }}">Blog</a></li>
                 </ul>
               </div>
             </div>
@@ -67,9 +67,9 @@
         <div class="row">
           <div class="col-12">
             <div class="footer-bottom-content">
-              <p class="mb-0">© <span class="sitename">{{ $settings['site_name']->value ?? 'ISVA-Innov' }}</span>. Tous droits réservés.</p>
+              <p class="mb-0">© {{ date('Y') }} <span class="sitename">{{ $settings['site_name']->value ?? 'ISVA-Innov' }}</span>. Tous droits réservés.</p>
               <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Conçu par <a href="https://pftechno.com" target="_blank" rel="noopener">PF TECHNO</a>
               </div>
             </div>
           </div>
