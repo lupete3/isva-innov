@@ -15,8 +15,11 @@ new class extends Component {
     public string $title_accent = '';
     public string $description = '';
     public string $benefits_text = '';
+    public string $button_text = '';
+    public string $button_url = '';
     public string $button2_text = '';
     public string $button2_url = '';
+    public string $phone = '';
     public string $badge_1_icon = '';
     public string $badge_1_title = '';
     public string $badge_1_subtitle = '';
