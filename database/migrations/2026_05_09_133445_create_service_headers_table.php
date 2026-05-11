@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('service_headers', function (Blueprint $table) {
             $table->id();
             $table->string('title')->default('Services');
-            $table->string('subtitle')->default("Nos domaines d\'expertise à votre service");
+            $table->string('subtitle')->default("Nos domaines d'expertise à votre service");
             $table->timestamps();
         });
     }
