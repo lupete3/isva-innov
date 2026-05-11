@@ -1,9 +1,11 @@
 <?php
 
 use Livewire\Volt\Component;
+use Livewire\WithFileUploads;
 use App\Models\About;
 
 new class extends Component {
+    use WithFileUploads;
     public About $about;
 
     public string $title = '';
