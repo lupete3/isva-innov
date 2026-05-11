@@ -12,12 +12,12 @@ class SettingSeeder extends Seeder
      */
     public function run(): void
     {
-        Setting::create(['key' => 'site_name', 'value' => 'Plateforme Partenaire']);
-        Setting::create(['key' => 'slogan', 'value' => 'Rejoignez notre réseau pour amplifier votre impact.']);
+        Setting::create(['key' => 'site_name', 'value' => 'ISVA-Innov']);
+        Setting::create(['key' => 'slogan', 'value' => "L'excellence en Audit et Expertise Comptable au cœur de la RDC."]);
         Setting::create(['key' => 'logo', 'value' => '']);
-        Setting::create(['key' => 'address', 'value' => '123 Rue de l\'Exemple, 75000 Paris']);
-        Setting::create(['key' => 'email', 'value' => 'contact@example.com']);
-        Setting::create(['key' => 'phone', 'value' => '+33 1 23 45 67 89']);
+        Setting::create(['key' => 'address', 'value' => 'Bukavu, RD Congo']);
+        Setting::create(['key' => 'email', 'value' => 'contact@isva-innov.com']);
+        Setting::create(['key' => 'phone', 'value' => '+243 978 654 321']);
         Setting::create(['key' => 'twitter_url', 'value' => '#']);
         Setting::create(['key' => 'facebook_url', 'value' => '#']);
         Setting::create(['key' => 'linkedin_url', 'value' => '#']);

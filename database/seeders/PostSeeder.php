@@ -15,9 +15,9 @@ class PostSeeder extends Seeder
     public function run(): void
     {
         $user = User::firstOrCreate(
-            ['email' => 'admin@example.com'],
+            ['email' => 'admin@isva-innov.cd'],
             [
-                'name' => 'Admin Demo',
+                'name' => 'Admin ISVA',
                 'password' => bcrypt('password'),
             ]
         );
