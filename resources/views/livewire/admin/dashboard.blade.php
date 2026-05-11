@@ -182,7 +182,9 @@ new class extends Component {
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="{{ route('admin.stats.index') }}">Voir les détails</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row g-4 mt-2">
@@ -219,9 +221,6 @@ new class extends Component {
                         <a class="small text-white stretched-link" href="{{ route('admin.job-openings.index') }}">Voir les détails</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
-                </div>
-            </div>
-        </div>
                 </div>
             </div>
         </div>
